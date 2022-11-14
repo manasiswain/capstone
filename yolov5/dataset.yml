@@ -1,0 +1,13 @@
+#train: ../dataset/train/images
+#val: ../dataset/valid/images
+train: ../dataset/images/train
+val: ../dataset/images/val
+
+#nc: 15
+#names: ['cucumber', 'apple', 'kiwi','banana','orange','coconut','peach','cherry','pear','pomegranate','pineapple','watermelon','melon','grape','strawberry']
+
+nc: 21
+names: ['cucumber', 'apple','onion','banana','orange','coconut','tomato','potato','carrot','cauliflower','pineapple','watermelon','cabbage','capsicum','chili','beetroot','ginger','garlic','brinjal','mushroom' ,'eggs' ]
+
+#nc: 19
+#names: ['apple', 'avocado', 'banana', 'coconut', 'grapes','guava', 'jackfruit', 'kiwi', 'lemon', 'litchi', 'mango', 'muskmelon','orange' ,'pear', 'pineapple', 'pomogranate', 'strawberry', 'sweetlime','watermelon']

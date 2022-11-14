@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+        <title>RRIR</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
+
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+<br>
+<style>
+        .button {
+          font-family:'Montserrat',sans-serif;
+          display: inline-block;
+          border-radius: 8px;
+          border: white;
+          color: black;
+          font-size: 28px;
+          padding: 20px;
+          width: 200px;
+          transition: all 0.5s;
+          cursor: pointer;
+          margin: 5px;
+        }
+
+        .button span {
+          cursor: pointer;
+          display: inline-block;
+          position: relative;
+          transition: 0.5s;
+        }
+
+        .button span:after {
+          content: '\00bb';
+          position: absolute;
+          opacity: 0;
+          top: 0;
+          right: -20px;
+          transition: 0.5s;
+        }
+
+        .button:hover span {
+          padding-right: 25px;
+          color: RosyBrown;
+        background-color: white;
+        }
+
+        .button:hover span:after {
+          opacity: 1;
+          right: 0;
+          color: RosyBrown;
+          background-color: white;
+        }
+        body {
+          background:#000;
+        }
+        .cater3-movingBG {
+            height: 100%;
+            background-image: url(https://wallpaperforu.com/wp-content/uploads/2021/04/Wallpaper-Food-Still-Life-Wooden-Surface-2048x1342px-1023.jpg);
+            background-size: 120%;
+            background-repeat: repeat-x;
+            animation: animatedBackground 50s linear alternate infinite;
+        }
+
+        @keyframes animatedBackground {
+            0% { background-position: 0 0; }
+            50% { background-position: 50% 0; }
+            100% { background-position: 0 0; }
+        }
+
+        .flyinTxtCont {
+            font-family:'Montserrat',sans-serif;
+            height: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+            align-items: flex-start;
+            -webkit-box-pack: end;
+            -ms-flex-pack: end;
+            justify-content: flex-end;
+            padding-bottom: 10%;
+              margin-left: 2em;
+        }
+        .flyIn {
+            color:#fff;
+            font-family: Arial, Helvetica, sans-serif;
+            text-transform:uppercase;
+            line-height:1.2em;
+            position:relative;
+          text-shadow: 2px 2px 40px rgba(0,0,0,0.7);
+        }
+        .lineOne {
+          font-family:'Montserrat',sans-serif;
+          transition-delay:.8s;
+          transition:.4s ease in;
+          animation: txtFlyIn .3s linear;
+        }
+        .lineTwo {
+            font-family:'Montserrat',sans-serif;
+            transition-delay:.15s;
+            transition:.6s ease in;
+            animation: txtFlyIn .6s linear;
+        }
+        .lineThree {
+            font-family:'Montserrat',sans-serif;
+            transition-delay:.20s;
+            transition:.8s ease in;
+            animation: txtFlyIn .9s linear;
+        }
+        .lineOne, .lineTwo, .lineThree {
+            font-size:110px;
+            font-weight: bold;
+            letter-spacing: 3px;
+          }
+        .lineFour {
+            font-family:'Montserrat',sans-serif;
+            transition-delay:2s;
+            transition:2s ease in;
+            animation: fadeIn 2s linear;
+            width: 100%;
+            display:inline-block;
+            color:white;
+            max-width:63%;
+            font-size:90px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            padding: .2em .5em;
+        }
+        @keyframes fadeIn{
+            0% { opacity:0;}
+            100% { opacity:1;}
+        }
+        @keyframes txtFlyIn{
+            0% { transform:translateX(-100%); }
+            100% { transform:translateX(0%); }
+        }
+
+</style>
+<div class="cater3-movingBG">
+<div class="flyinTxtCont">
+<div class="flyIn lineFour">RECIPE</div>
+<div class="flyIn lineFour">RECOMMENDATION</div>
+<div class="flyIn lineFour">SYSTEM</div>
+    <form action="/logg/" method="post">
+        <br>
+        <br>
+    <button class="button" style="float: right;opacity:0.9;"><span>LOGIN</span></button>
+
+</form>
+<form action="/signn/" method="post">
+    <button class="button" style="float: right;opacity:0.9;"><span>SIGN-UP</span></button>
+</form>
+</html>
+</div>
+</div>

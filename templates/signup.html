@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>RRIR</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
+</head>
+<style>
+        html, body {
+          width: 100%;
+          height:100%;
+        }
+
+        body {
+            background: linear-gradient(-45deg,#b380ff,#809fff,#e73c7e);
+            background-size: 400% 400%;
+            animation: gradient 35s ease infinite;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        input{
+        font-family:'Montserrat',sans-serif;
+       margin: auto;
+       display: block;
+       }
+       label {
+          font-family:'Montserrat',sans-serif;
+          display: block;
+          text-align: left;
+          line-height: 150%;
+          padding-left:140px;
+          font-size: .95em;
+      }
+      button {
+          font-family:'Montserrat',sans-serif;
+          display: inline-block;
+          border-radius: 8px;
+          border: white;
+          color: black;
+          font-size: 18px;
+          padding: 20px;
+          width: 150px;
+          transition: all 0.5s;
+          cursor: pointer;
+          margin: 5px;
+        }
+        .center {
+  margin: 0;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  width: 50rem;
+  height: 30rem;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, .55);
+  backdrop-filter: blur(100px);
+}
+
+    </style>
+<body>
+<form action="/sd/" method="POST">
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="container">
+  <h1 align="center" style="color:white;font-family:'Montserrat',sans-serif;">SIGN UP</h1>
+    <br>
+  {% if 5 in error %}
+    <label style="color:red;">NO ACCOUNT FOUND PLEASE SIGN-UP</label>
+  {% endif %}
+  {% if 1 in error %}
+    <label style="color:red;">Password Length Incorrect should be greater than 7</label>
+  {% endif %}
+  {% if 2 in error %}
+    <label style="color:red;">Password Not Matching</label>
+  {% endif %}
+  {% if 3 in error%}
+    <label style="color:red;">Password should have atleast one special character</label>
+  {% endif %}
+  {% if 4 in error%}
+    <label style="color:red;">Insert Error</label>
+  {% endif %}
+  <div class="form-group">
+    <label for="email" style="color:white">Email Address</label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      class="form-control"
+      placeholder="Enter Email"
+      style="background-color:#e6ccff;width:500px;"
+    />
+    <label for="username" style="color:white">Username</label>
+    <input
+      type="text"
+      id="username"
+      name="username"
+      class="form-control"
+      placeholder="Enter Username"
+      style="background-color:#e6ccff;width:500px;"
+    />
+    <label for="password1" style="color:white">Password</label>
+    <input
+      type="password"
+      id="password1"
+      name="password1"
+      class="form-control"
+      placeholder="Enter Password"
+      style="background-color:#e6ccff;width:500px;"
+    />
+    <label for="password2" style="color:white">Password Again</label>
+    <input
+      type="password"
+      id="password2"
+      name="password2"
+      class="form-control"
+      placeholder="Enter Password Again"
+      style="background-color:#e6ccff;width:500px;"
+    />
+    <br />
+    </div>
+       <div class="center"><button type="submit" style="background-color:white;color:lilac;opacity:0.2;">SIGN UP</button></div>
+
+
+  </div>
+</form>
+</body>
+</html>

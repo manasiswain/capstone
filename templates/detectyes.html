@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>RRIR</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
+    </head>
+
+<style>
+        body {
+        background-image: url(https://cdn.shopify.com/s/files/1/0027/7862/8140/files/image_4_ab34cfbd-009e-4b63-b421-1af7dbb3cffa.png?17387037372271741631);
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        }
+        .body2 {
+          padding: 25px 50px 75px 100px;
+          color: white
+        }
+
+      button {
+          display: inline-block;
+          border-radius: 8px;
+          border: white;
+          color: black;
+          font-size: 18px;
+          padding: 20px;
+          width: 200px;
+          transition: all 0.5s;
+          cursor: pointer;
+          margin: 5px;
+        }
+        button {
+    font-family:'Montserrat',sans-serif;
+    padding: 16px 20px;
+    font-size: 1.2em;
+    width: 200px;
+    cursor: pointer;
+    border: 0px;
+    text-transform: uppercase;
+    position: relative;
+    margin: 20px;
+    transition: all .25s ease;
+    background: transparent;
+    border: 1px solid white;
+    color: #fff;
+    overflow: hidden;
+    border-radius: 10px;
+}
+button:hover {
+    color: white;
+    background-color: RosyBrown;
+}
+.load {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: inherit
+}
+
+.load::after {
+    content: '';
+    position: absolute;
+    height:100%;
+    width:100%;
+    animation: loading1 1s ease infinite;
+    z-index: 10;
+    background:rgba(255,255,255,0.25);
+}
+
+.load::before {
+     content: '';
+    position: absolute;
+    height:100%;
+    width:100%;
+    animation: loading1 1s ease-out infinite;
+    z-index: 5;
+    background:rgba(255,255,255,0.25);
+}
+
+@keyframes loading1 {
+    0% {
+        transform: translate(0,100%);
+    }
+
+    100% {
+        transform: translate(0,-100%);
+    }
+}
+
+button.active {
+    transform: scale(.85)
+}
+
+button.activeLoading .loading {
+    visibility: visible;
+    opacity: 1
+}
+
+button .loading {
+    opacity: 0;
+    visibility: hidden
+}
+
+        .center {
+  margin: 0;
+  position: absolute;
+  top: 85%;
+  left: 60%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.center2 {
+  margin: 0;
+  position: absolute;
+  top: 85%;
+  left: 85%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.centerlog {
+  margin: 0;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.centerhome {
+  margin: 0;
+  position: absolute;
+  top: 10%;
+  left: 25%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  width: 550px;
+  height: auto;
+  box-shadow: 0 0 1rem 0 rgba(0,0,0,.2);
+  border-radius: 8px;
+  margin: 0;
+  position: absolute;
+  top: 150px;
+  left: auto;
+  background-color: rgba(255,255,255, .15);
+  backdrop-filter: blur(100px);
+}
+        .body2 {
+          padding: 25px 50px 75px 100px;
+        }
+    </style>
+
+</div>
+<br>
+<br>
+<div class="body2">
+    <div class="container">
+        <h1 style="font-family:'Montserrat',sans-serif;">ADD AMOUNT</h1>
+        <form action="/addamt/" method="post">
+          <label for="amtin"  style="color:white;font-family:'Montserrat',sans-serif;">Add amount of ingredient you want to use:</label><br>
+            <br>
+            {% for val in result %}
+              <label style="color:white;font-family:'Montserrat',sans-serif;" for={{val}}>Enter amount of {{val}} in grams</label><br>
+              <p style="color:white;font-family:'Montserrat',sans-serif;"><input type="number"name ={{val}} step="any" value="100" style="color:RosyBrown"></p>
+            {% endfor %}
+            <br>
+            <button>SUBMIT</button>
+        </form>
+    </div>
+    <form action="/" method="POST">
+    <div class="centerlog"><button>LOGOUT</button></div>
+    </form>
+    <form action="/newhome" method="POST">
+    <div class="centerhome"><button >HOME</button></div>
+    </form>
+</div>
+
+
+</body>
+</html>
